@@ -1,27 +1,30 @@
-# GithubSearch
+# Github Repository Search
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+This is a sample project demonstrating the use of Github Repository Search.
 
-## Development server
+The dependencies listed for the sample application are listed in package.json
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To build the application, we can use npm or yarn
 
-## Code scaffolding
+``` 
+npm install 
+or
+yarn install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The development server can be started using 
 
-## Build
+``` 
+yarn start 
+or
+npm start
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+The application can be access on http://localhost:4200
 
-## Running unit tests
+Due to time-constraint a very simple application was developed if having more time the following can be implemented - 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* ag-grid is being used to display the JSON data currently. This can be replaced by a proper UX with pagination supported
+* cypress framework can be used to provide unit-testing.
+* data validation can be done on the user input
+* data caching can be provided if the user is searching the same repository name. this will help in reducing the number of API calls to the Github API

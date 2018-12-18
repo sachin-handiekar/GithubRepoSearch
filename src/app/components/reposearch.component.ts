@@ -48,22 +48,18 @@ export class ReposearchComponent implements OnInit {
   ngOnInit() {
 
     if (this.githubRepo) {
-      this.githubRepo.user = false;
-      this.getUserInformation();
+      this.searchRepos();
     }
 
   }
 
-  searchUser() {
+  searchRepos() {
     if (this.githubRepo.repositoryName && this.githubRepo.repositoryName.length > 0) {
-      // this._githubService.updateRepositoryName(this.githubRepo.repositoryName);
-      this.getUserInformation();
-    } else {
-      this.githubRepo.user = false;
+      this.fetchRepoInfoFromGithub();
     }
   }
 
-  getUserInformation() {
+  fetchRepoInfoFromGithub() {
     if (this.githubRepo.repositoryName && this.githubRepo.repositoryName.length > 0) {
 
       this._githubService.getRepository(this.githubRepo.repositoryName).subscribe(user => {
@@ -74,15 +70,12 @@ export class ReposearchComponent implements OnInit {
         },
         (err) => {
           console.log('err:' + err);
-          this.githubRepo.user = false;
         },
         () => console.log('Done')
       );
 
-
     }
   }
-
 
   displaySearchTable(data: any) {
     this.rowData = data.items;
