@@ -1,0 +1,36 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Github Repository Search</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</header>
+
+<main role="main" class="container">
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="input-group">
+    <input type="text" name="username" class="form-control" placeholder="Repository name..."
+           [(ngModel)]="githubRepo.repositoryName">
+
+    <button type="button" class="btn btn-primary" (click)="searchUser()">Search</button>
+  </div>
+  <br/>
+
+    <div>
+    <ag-grid-angular
+      style="width: 1000px; height: 500px;"
+      class="ag-theme-balham"
+      [rowData]="rowData"
+      [gridOptions]="gridOptions"
+    >
+    </ag-grid-angular>
+    </div>
+</main>
+
+
+
