@@ -4,6 +4,12 @@ This is a sample project demonstrating the use of Github Repository Search.
 
 The dependencies listed for the sample application are listed in package.json
 
+Note : We will need the angular CLI library for this project, which can be installed - 
+
+```
+npm install -g @angular/cli
+```
+
 To build the application, we can use npm or yarn
 
 ``` 
